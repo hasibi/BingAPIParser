@@ -34,58 +34,6 @@
 	    <artifactId>commons-codec</artifactId>
 	    <version>1.7</version>
 	</dependency>
-	<!-- <dependency>
-	  <groupId>org.apache.hadoop</groupId>
-	  <artifactId>hadoop-mapreduce-client-core</artifactId>
-	  <version>${hadoop.version}</version>
-	  <scope>provided</scope>
-	</dependency> -->
-	
-	
-	   <!--  <dependency>
-          <groupId>yahoo.yinst.hadoop_mvn_common</groupId>
-          <artifactId>hadoop-common</artifactId>
-          <version>0.23.3.1207051607</version>
-          <scope>provided</scope>
-          <exclusions>
-            <exclusion>
-              <groupId>org.codehaus.jackson</groupId>
-              <artifactId>jackson-core-asl</artifactId>
-            </exclusion>
-            <exclusion>
-              <groupId>org.codehaus.jackson</groupId>
-              <artifactId>jackson-mapper-asl</artifactId>
-            </exclusion>
-          </exclusions>
-        </dependency>
-
-        <dependency>
-          <groupId>yahoo.yinst.hadoop_mvn_mapreduce</groupId>
-          <artifactId>hadoop-mapreduce-client-common</artifactId>
-          <version>0.23.3.1207292202</version>
-          <scope>provided</scope>
-        </dependency>
-
-        <dependency>
-          <groupId>yahoo.yinst.hadoop_mvn_mapreduce</groupId>
-          <artifactId>hadoop-mapreduce-client-core</artifactId>
-          <version>0.23.3.1207292202</version>
-          <scope>provided</scope>
-        </dependency>
-        
-        <dependency>
-            <groupId>yahoo.yinst.pig</groupId>
-            <artifactId>pig</artifactId>
-            <version>0.9.3.1204121426</version>
-            <classifier>h23</classifier> 	
-            <scope>compile</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.apache.hadoop</groupId>
-                    <artifactId>pig</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency> -->
 
         <dependency>
 		  <groupId>com.restfb</groupId>
@@ -116,46 +64,6 @@
                                 <target>1.6</target>
                         </configuration>
                 </plugin>
-
-			<!-- <plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-dependency-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>copy</id>
-						<phase>package</phase>
-						<goals>
-							<goal>copy</goal>
-						</goals>
-						<configuration>
-							<artifactItems>
-								<artifactItem>
-									<groupId>com.restfb</groupId>
-						            <artifactId>restfb</artifactId>
-            						<overWrite>false</overWrite>            						
-									<outputDirectory>${project.build.directory}/lib</outputDirectory>
-								</artifactItem>			
-							</artifactItems>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin> -->
-<!--			<plugin>
-				<groupId>yahoo.yinst.maven_plugins</groupId>
-				<artifactId>yjava_maven_plugins_yinst</artifactId>
-				<version>0.2.5</version>
-				<executions>
-					<execution> <goals> <goal>create</goal> </goals> </execution>
-				</executions>
-				<configuration>
-					<buildtype>release</buildtype>
-					<sourceDirectory>${basedir}/src/main/pkg/yicDescription	Resource	Path	Location	Type
-Unbound classpath variable: 'M2_REPO/commons-beanutils/commons-beanutils/1.8.0/commons-beanutils-1.8.0.jar' in project 'com.yahoo.homerun.reco'	com.yahoo.homerun.reco		Build path	Build Path Problem
-f</sourceDirectory>
-					<target_dir>${basedir}/target</target_dir>
-					<chdir>${basedir}/src/main/pkg/yicf</chdir>
-				</configuration>
-			</plugin> -->
 			<plugin>
         		<groupId>org.apache.maven.plugins</groupId>
         		<artifactId>maven-failsafe-plugin</artifactId>
