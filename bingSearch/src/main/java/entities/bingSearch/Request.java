@@ -28,43 +28,7 @@ import org.apache.commons.codec.binary.Base64;
 public class Request
 {
 	static String accountKey = "Z2ikXy/Spk3t5ay/CdGd5zCAtfIJWngGaaFSrGososg=";
-	
-	public static void main( String[] args )
-    {
-        String query = "paris";
-        System.out.println( "Searching for Query: " + query );
-        InputStream is = BuildRequest( query, 10);
-        String result = streamToString(is);
-        System.out.println("output \n" + result);
-        stringToFile(result, "./src/main/outputs/" + query+".xml");
-//        InputStream is = BuildRequest(query);
 
-//        try
-//        {
-//            // Send the request; display the response.
-//        	
-//			//XMLParser.DisplayResponse(is);
-//
-//			//Convert response into String
-//			String line;
-//			StringBuilder builder = new StringBuilder();
-//			BufferedReader reader = new BufferedReader(new InputStreamReader(is));
-//			while((line = reader.readLine()) != null) {
-//				builder.append(line);
-//			}
-//			String response = builder.toString();
-//			System.out.println("writes output to file ...");
-//			//Convert response into file
-//			FileWriter fstream = new FileWriter(new File("dallass.xml"), true);
-//			fstream.write(response);
-//			fstream.close();
-//        }
-//        catch (Exception ex)
-//        {
-//            // An exception occurred while accessing the network.
-//		    System.err.println("IOException: " + ex.getMessage());
-//        }
-	}
 	
 	static InputStream BuildRequest(String query, int count)
     {
@@ -112,7 +76,7 @@ public class Request
 		return is;
     }
 	
-	private static String streamToString(InputStream is){
+	public static String streamToString(InputStream is){
 		BufferedReader br = new BufferedReader(new InputStreamReader(is));
 		StringBuilder builder = new StringBuilder();
 		String line = null;
@@ -125,7 +89,7 @@ public class Request
 		return builder.toString();
 	}
 	
-	private static void stringToFile(String str, String fileName){
+	public static void stringToFile(String str, String fileName){
 //		File file = new File(fileName);
 		
 		BufferedWriter writer;
